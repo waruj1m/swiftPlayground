@@ -12,7 +12,12 @@ let playgroundFiles = [
     "02_functions_and_closures.swift", 
     "03_structs_and_classes.swift",
     "04_advanced_features.swift",
-    "05_concurrency_and_async.swift"
+    "05_concurrency_and_async.swift",
+    "06_stdlib_collections.swift",
+    "07_foundation_and_core.swift",
+    "08_performance_optimization.swift",
+    "09_networking_and_data.swift",
+    "10_testing_and_debugging.swift"
 ]
 
 print("Found \(playgroundFiles.count) playground scripts to run.\n")

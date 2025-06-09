@@ -38,6 +38,46 @@ A comprehensive collection of Swift playground scripts designed to explore and t
 - **Continuations**: Bridging callback-based APIs
 - **Cancellation**: Task management and priorities
 
+### 6. `06_stdlib_collections.swift`
+- **Advanced Array Operations**: prefix, suffix, drop, chunking
+- **Set Operations**: union, intersection, relationships
+- **Dictionary Transformations**: grouping, merging, filtering
+- **Custom Sequences**: Iterator protocol, Fibonacci, countdown
+- **Lazy Evaluation**: Performance optimization techniques
+- **Collection Algorithms**: sorting, partitioning, searching
+
+### 7. `07_foundation_and_core.swift`
+- **Date and Time**: Formatting, calculations, time zones
+- **URL Handling**: Components, query parameters, file URLs
+- **JSON Processing**: Encoding, decoding, custom transformations
+- **String Processing**: Regular expressions, localization
+- **FileManager**: File operations, directory management
+- **Data Processing**: Base64, hexadecimal, UserDefaults
+
+### 8. `08_performance_optimization.swift`
+- **Performance Measurement**: Benchmarking, timing utilities
+- **Copy-on-Write**: Value semantics, custom COW implementation
+- **Memory Patterns**: Value vs reference types, memory layout
+- **Algorithm Complexity**: Big O analysis, performance comparison
+- **String Optimization**: Efficient concatenation, searching
+- **Object Pools**: Memory management patterns
+
+### 9. `09_networking_and_data.swift`
+- **Mock Network Service**: Simulated async operations
+- **Concurrent Requests**: Sequential vs parallel execution
+- **Task Groups**: Batch operations, error handling
+- **Retry Logic**: Resilient network patterns
+- **Data Transformation**: Pipeline processing
+- **Caching Strategies**: TTL-based caching with actors
+
+### 10. `10_testing_and_debugging.swift`
+- **Testing Patterns**: Custom test framework, assertions
+- **Property-Based Testing**: Randomized input validation
+- **Debugging Techniques**: Debug printing, execution timing
+- **Error Handling**: Validation patterns, recovery strategies
+- **Test Doubles**: Mocking, dependency injection
+- **Performance Testing**: Benchmarking, profiling
+
 ## 🚀 Usage
 
 ### Run Individual Scripts
@@ -47,7 +87,7 @@ chmod +x *.swift
 
 # Run individual playground
 ./01_fundamentals.swift
-./02_functions_and_closures.swift
+./06_stdlib_collections.swift
 # ... etc
 ```
 
@@ -61,7 +101,7 @@ chmod +x *.swift
 ```bash
 # Alternative execution method
 swift 01_fundamentals.swift
-swift 02_functions_and_closures.swift
+swift 07_foundation_and_core.swift
 # ... etc
 ```
 
@@ -72,8 +112,12 @@ These playgrounds demonstrate:
 - Object-oriented and protocol-oriented programming
 - Functional programming concepts
 - Modern concurrency features
+- Advanced collection manipulation
+- Foundation framework capabilities
+- Performance optimization techniques
+- Networking and data handling
+- Testing and debugging strategies
 - Best practices from Swift API Design Guidelines
-- Real-world coding patterns and techniques
 
 ## 🔧 Requirements
 
@@ -97,5 +141,14 @@ Each script is designed to be educational and demonstrate:
 - Memory management patterns
 - Error handling strategies
 - Concurrent programming techniques
+- Real-world problem solving
+
+## 📚 Coverage Areas
+
+**Core Language**: Types, functions, control flow, OOP concepts
+**Advanced Features**: Generics, protocols, concurrency, memory management
+**Standard Library**: Collections, algorithms, sequences, performance
+**Foundation**: Date/time, networking, JSON, file system, data processing
+**Quality Assurance**: Testing patterns, debugging, optimization, profiling
 
 Feel free to modify and experiment with these scripts to deepen your understanding of Swift! 
