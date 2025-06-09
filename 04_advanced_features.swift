@@ -200,7 +200,7 @@ for point in coordinates {
         print("On x-axis: \(point)")
     case (0, _):
         print("On y-axis: \(point)")
-    case (-1..., -1...):
+    case (let x, let y) where x < 0 && y < 0:
         print("In third quadrant: \(point)")
     case (let x, let y) where x == y:
         print("On diagonal: \(point)")

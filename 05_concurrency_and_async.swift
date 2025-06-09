@@ -176,7 +176,7 @@ Task {
         try? await account1.transfer(to: account2, amount: 300)
     }()
     
-    await (operation1, operation2, operation3)
+    let _ = await (operation1, operation2, operation3)
     
     print("Final balances:")
     print("Account 1: $\(await account1.getBalance())")
@@ -309,7 +309,7 @@ class UIManager {
 }
 
 Task {
-    let uiManager = await UIManager()
+    let uiManager = UIManager()
     await uiManager.performAsyncOperation()
     print()
 }

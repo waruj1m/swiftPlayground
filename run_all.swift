@@ -5,7 +5,7 @@
 
 import Foundation
 
-print("=== Swift Playground Collection ===\n")
+print("🚀 Swift Playground Collection Runner\n")
 
 let playgroundFiles = [
     "01_fundamentals.swift",
@@ -15,20 +15,27 @@ let playgroundFiles = [
     "05_concurrency_and_async.swift"
 ]
 
+print("Found \(playgroundFiles.count) playground scripts to run.\n")
+
 for (index, file) in playgroundFiles.enumerated() {
-    print("📚 Running \(file)...")
-    print("=" * 50)
+    print("📚 [\(index + 1)/\(playgroundFiles.count)] Running \(file)...")
+    print(String(repeating: "=", count: 60))
     
     let process = Process()
-    process.executableURL = URL(fileURLWithPath: "/usr/bin/swift")
-    process.arguments = [file]
+    process.executableURL = URL(fileURLWithPath: "/usr/bin/env")
+    process.arguments = ["swift", file]
+    process.currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
+    
+    let startTime = Date()
     
     do {
         try process.run()
         process.waitUntilExit()
         
+        let duration = Date().timeIntervalSince(startTime)
+        
         if process.terminationStatus == 0 {
-            print("✅ \(file) completed successfully")
+            print("✅ \(file) completed successfully in \(String(format: "%.2f", duration))s")
         } else {
             print("❌ \(file) failed with exit code \(process.terminationStatus)")
         }
@@ -37,11 +44,13 @@ for (index, file) in playgroundFiles.enumerated() {
     }
     
     if index < playgroundFiles.count - 1 {
-        print("\n" + "=" * 50)
-        print("Press Enter to continue to next playground...")
+        print("\n" + String(repeating: "-", count: 60))
+        print("⏯️  Press Enter to continue to next playground (or Ctrl+C to stop)...")
         _ = readLine()
         print()
     }
 }
 
-print("\n🎉 All playgrounds completed!") 
+print("\n" + String(repeating: "=", count: 60))
+print("🎉 All \(playgroundFiles.count) playground scripts completed!")
+print("📖 Check out the README.md for more information about each playground.") 
